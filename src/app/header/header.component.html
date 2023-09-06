@@ -1,0 +1,71 @@
+<mat-toolbar  >
+  <!-- <span>My Application</span> -->
+
+  <div class="toolbar-content">
+    <img class="toolbar-image" src="../../assets/img/logo_sucre3.png" alt="Logo Sucre">
+    <span class="toolbar-title">Artículos Científicos</span>
+  </div>
+
+  <div class="spacer"></div>
+
+  <div fxHide.lt-md>
+    <!-- Investigacion -->
+  <a mat-button href="https://investiga.estudiantesucre.edu.ec/" target="_blank">Investigación</a>
+
+  <!-- Programas -->
+  <button mat-button [matMenuTriggerFor]="programas" class="icon-after-button" >
+    Programas <mat-icon>keyboard_arrow_down</mat-icon>
+  </button>
+  <!-- Cat1 -->
+  <mat-menu #programas="matMenu">
+    <a mat-button href="https://investiga.estudiantesucre.edu.ec/jornadas-tecnologicas/" target="_blank">Jornadas Tecnológicas</a>
+
+  </mat-menu>
+
+<!--  Proyectos -->
+<button mat-button [matMenuTriggerFor]="proyectos" class="icon-after-button">Proyectos
+  <mat-icon>keyboard_arrow_down</mat-icon>
+</button>
+
+ <!-- Cat1 -->
+ <mat-menu #proyectos="matMenu" yPosition="below" >
+
+  <button mat-menu-item [matMenuTriggerFor]="proyectID">Proyectos I+D</button>
+  <a button mat-menu-item href="https://investiga.estudiantesucre.edu.ec/proyectos-2019-i/" target="_blank">Proyectos 2019 I</a>
+  <a button mat-menu-item href="https://investiga.estudiantesucre.edu.ec/proyectos-2020-i/" target="_blank">Proyectos 2020 I</a>
+  <a button mat-menu-item href="https://investiga.estudiantesucre.edu.ec/proyectos-2021-i/" target="_blank">Proyectos 2021 I</a>
+
+</mat-menu>
+
+<mat-menu #proyectID="matMenu">
+  <a button mat-menu-item href="https://investiga.estudiantesucre.edu.ec/manual-apa/">Manual de Estilo</a>
+  <a button mat-menu-item href="https://investiga.estudiantesucre.edu.ec/herramientas/">Herramientas</a>
+
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="public" class="icon-after-button">Publicaciones
+  <mat-icon>keyboard_arrow_down</mat-icon>
+</button>
+
+<mat-menu #public="matMenu" yPosition="below" >
+  <a button mat-menu-item href="https://investiga.estudiantesucre.edu.ec/libros-2/" target="_blank">RITAM</a>
+  <a button mat-menu-item href="https://investiga.estudiantesucre.edu.ec/publicaciones/" target="_blank">Artículos</a>
+  <a button mat-menu-item href="https://investiga.estudiantesucre.edu.ec/libros/" target="_blank">Libros</a>
+  <a button mat-menu-item href="https://investiga.estudiantesucre.edu.ec/capitulos-de-libro/" target="_blank">Capítulos de Libro</a>
+  <a button mat-menu-item href="https://investiga.estudiantesucre.edu.ec/eventos/" target="_blank">Eventos</a>
+
+</mat-menu>
+</div>
+
+<button mat-icon-button *ngIf="isMobile" (click)="toggleMenu()" fxShow.lt-md>
+  <mat-icon>menu</mat-icon>
+</button>
+
+<div fxShow.lt-md class="collapsed-menus">
+
+</div>
+
+
+</mat-toolbar>
+
+

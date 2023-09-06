@@ -1,0 +1,32 @@
+.toolbar-image {
+  width: 130px; /* Adjust the width as needed */
+  height: auto; /* To maintain aspect ratio */
+  margin-right: 40px; /* Add spacing between image and title */
+}
+
+.mat-toolbar {
+  background-color: #1A4B80;
+  color: white;
+  font-size: smaller;
+
+}
+
+
+.toolbar-title {
+  font-size: 20px;
+}
+
+.spacer{
+  flex: 1 1 auto;
+}
+
+
+/* .icon-after-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+} */
+
+.mat-button-wrapper {
+  margin-right: 40px; /* Adjust the margin as needed */
+}

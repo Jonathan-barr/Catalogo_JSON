@@ -1,0 +1,12 @@
+/* Apply styles to the wrapper div */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures that the wrapper takes at least the viewport height */
+}
+
+/* Apply styles to the content area */
+.content {
+  flex: 1; /* This pushes the footer to the bottom */
+  padding: 20px; /* Add padding for better spacing */
+}

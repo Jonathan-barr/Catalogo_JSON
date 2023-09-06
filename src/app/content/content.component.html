@@ -1,0 +1,25 @@
+
+
+<body style="border-bottom-style: none;border-bottom-color: rgb(211,214,217);">
+
+  <div id="empresa" style="padding: 20px;margin: 1px; border-bottom: 2px dotted rgb(195,197,197);" *ngFor="let item of items">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-7 col-lg-8">
+                    <h1><span style="color: rgb(27, 113, 153);">{{item.Titulo}}</span></h1>
+                    <p>{{item.Tipo}}</p>
+                    <p><strong>Autor: </strong>{{item.Autor}}</p>
+                    <p><strong>Coautores: </strong>{{item.Coautores}}</p>
+                    <p><strong>Fecha: </strong>{{item.Fecha}}</p>
+                    <a [href]="item.URL" target="_blank">
+                      <button class="btn btn-primary" type="button">Ver Artículo</button>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-3"><img [src]="item.img" width="215" height="306" style="margin-top: 32px;"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
